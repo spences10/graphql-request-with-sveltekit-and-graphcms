@@ -1,12 +1,12 @@
 <script context="module">
-  export const load = async ({ fetch, page }) => {
+  export const load = async ({ fetch, url }) => {
     const res = await fetch('/pages.json')
     if (res.ok) {
       const pages = await res.json()
       return {
         props: {
           pages,
-          key: page.path,
+          key: url.pathname,
         },
       }
     }
@@ -20,7 +20,7 @@
   import { themeChange } from 'theme-change'
   import '../app.css'
 
-  onMount(async () => {
+  onMount(() => {
     themeChange(false)
   })
 

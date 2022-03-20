@@ -38,8 +38,8 @@
       </figure>
       <div class="card-body">
         <h2 class="title font-bold text-2xl mb-2">{post.title}</h2>
-        <p class="mb-2">{post.excerpt}</p>
-        <div>
+        <p>{post.excerpt}</p>
+        <div class="flex justify-center mt-5 space-x-2 mb-3">
           {#if post.tags}
             {#each post.tags as tag}
               <span class="badge badge-primary space-x-1 mr-2"
