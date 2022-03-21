@@ -1,7 +1,7 @@
 import { client } from '$lib/graphql-client'
 import { gql } from 'graphql-request'
 
-export const get = async (req, res) => {
+export const get = async () => {
   try {
     const query = gql`
       query Pages {
